@@ -40,7 +40,7 @@ jobs:
       
       # Step3: Push the output to github
       - name: Push output
-        run:
+        run: |
           REPOSITORY_NAME="${GITHUB_REPOSITORY}"
           DEPLOY_REPO="https://${{ secrets.ACCESS_TOKEN }}@github.com/${REPOSITORY_NAME}.git"
           cd out
