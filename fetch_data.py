@@ -36,6 +36,7 @@ index.replace_all_objects(objects, {
 
 # Step4: 写数据到json
 print("Step4: 写数据到json")
+os.mkdir("out")
 for tv_json in tvs:
     if "name" not in tv_json:
         continue
