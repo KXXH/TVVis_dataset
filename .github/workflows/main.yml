@@ -29,7 +29,6 @@ jobs:
       - name: pip install
         run: 
           pip install -r requirements.txt
-          mkdir out
       
       # Step2: Run python script
       - name: Run py script
@@ -42,6 +41,7 @@ jobs:
       # Step3: Push the output to github
       - name: Push output
         run:
+          mkdir out
           REPOSITORY_NAME="${GITHUB_REPOSITORY}"
           DEPLOY_REPO="https://${{ secrets.ACCESS_TOKEN }}@github.com/${REPOSITORY_NAME}.git"
           cd out
